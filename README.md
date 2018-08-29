@@ -1,1 +1,1 @@
-# Megapolis store Redesigned
+# Megapolis store

@@ -1,23 +1,11 @@
-// Side navigation toggle
-var navToggle = document.querySelector('.nav-toggle');
-var navList = document.querySelector('.nav-list');
-var overlay = document.querySelector('.overlay');
-navToggle.addEventListener('click', toggleSideNav);
+var body = document.querySelector('body');
+var toggleButton = document.querySelector('.main-header__toggle-button');
+var navContainer = document.querySelector('.main-header__navigation');
 
-overlay.addEventListener('click', function() {
-    navToggle.classList.remove('open');
-    navList.classList.remove('open');
-    overlay.classList.remove('open');
-});
-
-navList.addEventListener('click', function(e) {
-    if (e.target.closest('.nav-list__item')) {
-        toggleSideNav();
-    }
-});
+toggleButton.addEventListener('click', toggleSideNav);
 
 function toggleSideNav() {
-    navToggle.classList.toggle('open');
-    navList.classList.toggle('open');
-    overlay.classList.toggle('open');
-};
+    toggleButton.classList.toggle('open');
+    navContainer.classList.toggle('open');
+    body.classList.toggle('scroll-disabled');
+}
