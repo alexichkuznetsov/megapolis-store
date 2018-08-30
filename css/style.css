@@ -19,7 +19,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: #ecf0f1; }
+  background-color: #ffffff; }
 
 .visually-hidden {
   position: absolute;
@@ -39,8 +39,8 @@ body {
   height: 6.5rem;
   width: 100vw;
   padding: 0 3rem;
-  border-bottom: 1px solid #d5d9db;
-  background-color: #ecf0f1;
+  border-bottom: 1px solid #dddddd;
+  background-color: #ffffff;
   display: flex;
   align-items: center; }
   .main-header.open {
@@ -126,12 +126,12 @@ body {
       flex-direction: column; }
       .nav-list__item > a {
         padding: 3rem 5rem;
-        color: #ecf0f1;
+        color: #ffffff;
         font-size: 2.2rem; }
         .nav-list__item > a:hover {
           opacity: 1; }
       .nav-list__item:not(:last-child) > a {
-        border-bottom: 1px solid rgba(236, 240, 241, 0.4); }
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
       .nav-list__item:not(:last-child) {
         margin: 0; }
       .nav-list.open {
@@ -142,12 +142,12 @@ body {
   @media only screen and (max-width: 1100px) {
     .nav-contacts {
       display: block;
-      color: #ecf0f1; }
+      color: #ffffff; }
       .nav-contacts::before {
         content: '';
         display: block;
         height: 1rem;
-        background-color: rgba(236, 240, 241, 0.4); }
+        background-color: rgba(255, 255, 255, 0.4); }
       .nav-contacts__desc {
         font-size: 2rem;
         margin: 2rem 0 1rem 5rem; }
@@ -162,7 +162,7 @@ body {
           width: 4.5rem;
           height: 4.5rem;
           border-radius: 50%;
-          fill: #ecf0f1; }
+          fill: #ffffff; }
           .nav-contacts__icons svg:not(:last-child) {
             margin-right: 1rem; } }
 
@@ -184,11 +184,13 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    filter: saturate(0.8); }
 
 .section-water {
   max-width: 120rem;
   margin: 0 auto;
+  margin-bottom: 10rem;
   color: #646464; }
   @media only screen and (max-width: 1080px) {
     .section-water {
@@ -204,3 +206,92 @@ body {
   width: 100%;
   height: 1px;
   background-color: #ccc; }
+
+.water-list {
+  list-style: none;
+  margin-top: 2.5rem;
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 1rem; }
+  .water-list__item {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px; }
+
+.water-item__image {
+  height: 30rem;
+  padding: 1rem 0;
+  background-color: #f1f1f1;
+  overflow: hidden; }
+  .water-item__image img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; }
+
+.water-item__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem; }
+  .water-item__info p {
+    font-size: 2.4rem;
+    color: #000; }
+
+.water-item__more-label {
+  display: flex;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background-color .2s ease; }
+  .water-item__more-label p {
+    font-size: 2rem;
+    margin-right: auto;
+    color: #646464; }
+  .water-item__more-label svg {
+    width: 3.5rem;
+    height: 3.5rem;
+    fill: #646464;
+    transition: transform .2s ease; }
+  .water-item__more-label:hover {
+    background-color: rgba(0, 0, 0, 0.1); }
+    .water-item__more-label:hover p {
+      color: #525252; }
+    .water-item__more-label:hover svg {
+      fill: #525252; }
+
+.water-item__more-checkbox:checked ~ .water-item__more-label > svg {
+  transform: rotate(90deg); }
+
+.water-item__more-checkbox:checked ~ .water-item__desc {
+  max-height: 100rem; }
+
+.water-item__desc {
+  max-height: 0;
+  transition: max-height .4s ease-in-out; }
+
+.water-item__desc-price {
+  padding: 1rem 2rem;
+  list-style: none; }
+  .water-item__desc-price > li {
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.6rem; }
+    .water-item__desc-price > li:hover {
+      background-color: rgba(0, 0, 0, 0.1); }
+    .water-item__desc-price > li:not(:last-child) {
+      margin-bottom: 1rem; }
+
+.water-item__desc-info {
+  padding: 1rem 2.6rem;
+  font-size: 1.5rem;
+  line-height: 1.5; }
+  .water-item__desc-info span {
+    display: block; }
+    .water-item__desc-info span:not(:last-child) {
+      margin-bottom: .4rem; }
+    .water-item__desc-info span:last-child {
+      margin-bottom: 1rem; }
