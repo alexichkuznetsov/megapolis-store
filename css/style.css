@@ -166,6 +166,10 @@ body {
           .nav-contacts__icons svg:not(:last-child) {
             margin-right: 1rem; } }
 
+@media only screen and (max-width: 1080px) {
+  main {
+    padding: 0 1.2rem; } }
+
 .main-banner {
   max-width: 120rem;
   margin: 0 auto;
@@ -190,11 +194,7 @@ body {
 .section-water {
   max-width: 120rem;
   margin: 0 auto;
-  margin-bottom: 10rem;
   color: #646464; }
-  @media only screen and (max-width: 1080px) {
-    .section-water {
-      padding: 0 1.2rem; } }
 
 .section-title {
   margin: 2rem 0;
@@ -261,15 +261,19 @@ body {
     .water-item__more-label:hover svg {
       fill: #525252; }
 
+.water-item__more-checkbox:checked ~ .water-item__more-label {
+  background-color: rgba(0, 0, 0, 0.1); }
+
 .water-item__more-checkbox:checked ~ .water-item__more-label > svg {
   transform: rotate(90deg); }
 
 .water-item__more-checkbox:checked ~ .water-item__desc {
-  max-height: 100rem; }
+  height: 30rem; }
 
 .water-item__desc {
-  max-height: 0;
-  transition: max-height .4s ease-in-out; }
+  height: 0;
+  overflow: auto;
+  transition: height .4s ease-in-out; }
 
 .water-item__desc-price {
   padding: 1rem 2rem;
@@ -295,3 +299,55 @@ body {
       margin-bottom: .4rem; }
     .water-item__desc-info span:last-child {
       margin-bottom: 1rem; }
+
+.section-coffee {
+  max-width: 120rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  color: #646464; }
+
+.coffee-list {
+  list-style: none;
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-gap: 1rem; }
+  .coffee-list__item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden; }
+
+.coffee-item__figure {
+  background-color: #f1f1f1;
+  padding: 1rem 0;
+  overflow: hidden;
+  height: 24rem; }
+  .coffee-item__figure img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; }
+
+.coffee-item__info {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: repeat(2, min-content); }
+  .coffee-item__info-title {
+    grid-column: 1 / 2;
+    padding: 1rem;
+    align-self: center;
+    font-size: 1.8rem;
+    color: #000; }
+  .coffee-item__info-price {
+    grid-column: 2 / 3;
+    align-self: center;
+    justify-self: end;
+    padding-right: 1rem;
+    font-size: 1.8rem;
+    color: #000; }
+  .coffee-item__info-desc {
+    grid-column: 1 / 3;
+    padding: 1rem;
+    font-size: 1.6rem; }
