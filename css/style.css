@@ -19,7 +19,8 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  scroll-behavior: smooth; }
 
 .visually-hidden {
   position: absolute;
@@ -54,7 +55,7 @@ body {
         text-decoration: none;
         color: inherit; }
       .main-header__contacts p:not(:last-child) {
-        margin-right: 1rem; }
+        margin-right: 2rem; }
     @media only screen and (max-width: 1100px) {
       .main-header__contacts {
         display: none; } }
@@ -70,12 +71,12 @@ body {
       .main-header__toggle-button .bar {
         background-color: #2c9fec;
         width: 3.5rem;
-        height: .3rem;
-        margin: .7rem auto;
+        height: 0.3rem;
+        margin: 0.7rem auto;
         transform: translate3d(0, 0, 0) rotate(0deg);
         transform-origin: left;
         backface-visibility: hidden;
-        transition: transform .3s ease, opacity .3s ease; }
+        transition: transform 0.3s ease, opacity 0.3s ease; }
       .main-header__toggle-button.open .bar:nth-child(1) {
         transform: translate3d(0, -0.3rem, 0) rotate(45deg); }
       .main-header__toggle-button.open .bar:nth-child(2) {
@@ -92,7 +93,7 @@ body {
     text-decoration: none;
     color: inherit; }
     .main-header__branding:link:hover, .main-header__branding:visited:hover {
-      opacity: .8; }
+      opacity: 0.8; }
   .main-header__navigation {
     margin-left: auto; }
     @media only screen and (max-width: 1100px) {
@@ -104,7 +105,7 @@ body {
         width: 100%;
         height: calc(100vh - 6.5rem);
         background-color: #2c9fec;
-        transition: left .3s ease;
+        transition: left 0.3s ease;
         overflow: auto; }
         .main-header__navigation.open {
           left: 0; } }
@@ -120,7 +121,7 @@ body {
     text-decoration: none;
     color: inherit; }
     .nav-list__item > a:hover {
-      opacity: .6; }
+      opacity: 0.6; }
   @media only screen and (max-width: 1100px) {
     .nav-list {
       flex-direction: column; }
@@ -158,16 +159,18 @@ body {
         display: flex;
         margin: 1rem 0 2rem 0;
         padding-left: 5rem; }
+        .nav-contacts__icons a:not(:last-child) {
+          margin-right: 2.5rem; }
         .nav-contacts__icons svg {
           width: 4.5rem;
           height: 4.5rem;
-          border-radius: 50%;
-          fill: #ffffff; }
-          .nav-contacts__icons svg:not(:last-child) {
-            margin-right: 1rem; } }
+          fill: #ffffff; } }
 
 @media only screen and (max-width: 1080px) {
-  .section-water, .section-coffee, .section-others {
+  .section-water,
+  .section-coffee,
+  .section-others,
+  .section-contacts {
     padding: 0 1.2rem; } }
 
 .main-banner {
@@ -177,6 +180,21 @@ body {
   @media only screen and (max-width: 1080px) {
     .main-banner {
       margin-top: 6.5rem; } }
+
+.swiper-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  margin-top: 9rem;
+  border-radius: 5px;
+  overflow: hidden; }
+  @media only screen and (max-width: 1080px) {
+    .swiper-container {
+      margin-top: 5rem;
+      border-radius: 0; } }
+  .swiper-container img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block; }
 
 .banner-container {
   border-radius: 6px;
@@ -198,7 +216,7 @@ body {
 
 .section-title {
   margin: 2rem 0;
-  padding-left: .2rem;
+  padding-left: 0.2rem;
   font-size: 2.4rem; }
 
 .divider {
@@ -217,29 +235,43 @@ body {
   .water-list__item {
     overflow: hidden;
     border: 1px solid #ccc;
-    border-radius: 5px; }
+    border-radius: 5px;
+    position: relative; }
 
 .water-item__image {
   height: 30rem;
   padding: 1rem 0;
   background-color: #f1f1f1;
   overflow: hidden; }
-  .water-item__image img {
+  .water-item__image--img {
     max-height: 100%;
     max-width: 100%;
     object-fit: cover;
     display: block;
     margin: 0 auto; }
 
+.water-item__info-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 7rem;
+  height: 10rem; }
+  .water-item__info-link img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block; }
+
 .water-item__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem; }
+  .water-item__info h3,
   .water-item__info p {
     font-size: 2.4rem;
     color: #000; }
     @media only screen and (max-width: 400px) {
+      .water-item__info h3,
       .water-item__info p {
         font-size: 2rem; } }
 
@@ -247,7 +279,7 @@ body {
   display: flex;
   padding: 1rem 2rem;
   cursor: pointer;
-  transition: background-color .2s ease; }
+  transition: background-color 0.2s ease; }
   .water-item__more-label p {
     font-size: 2rem;
     margin-right: auto;
@@ -256,7 +288,7 @@ body {
     width: 3.5rem;
     height: 3.5rem;
     fill: #646464;
-    transition: transform .2s ease; }
+    transition: transform 0.2s ease; }
   .water-item__more-label:hover {
     background-color: rgba(0, 0, 0, 0.1); }
     .water-item__more-label:hover p {
@@ -276,7 +308,7 @@ body {
 .water-item__desc {
   height: 0;
   overflow: auto;
-  transition: height .4s ease-in-out; }
+  transition: height 0.4s ease-in-out; }
 
 .water-item__desc-price {
   padding: 1rem 2rem;
@@ -299,11 +331,13 @@ body {
   .water-item__desc-info span {
     display: block; }
     .water-item__desc-info span:not(:last-child) {
-      margin-bottom: .4rem; }
+      margin-bottom: 0.4rem; }
     .water-item__desc-info span:last-child {
       margin-bottom: 1rem; }
 
-.section-coffee, .section-others {
+.section-coffee,
+.section-others,
+.section-contacts {
   max-width: 120rem;
   margin: 0 auto;
   margin-top: 4rem;
@@ -342,6 +376,7 @@ body {
     padding: 1rem;
     align-self: center;
     font-size: 1.8rem;
+    font-weight: 400;
     color: #000; }
   .goods-item__info-price {
     grid-column: 2 / 3;
@@ -390,10 +425,11 @@ body {
       color: inherit;
       text-decoration: none;
       font-size: 2rem;
-      transition: color .2s ease; }
-      .main-footer__contacts a:link:hover,
-      .main-footer__contacts a:visited:hover {
-        color: rgba(100, 100, 100, 0.8); }
+      transition: color 0.2s ease; }
+      .main-footer__contacts a:link:hover, .main-footer__contacts a:link:active,
+      .main-footer__contacts a:visited:hover,
+      .main-footer__contacts a:visited:active {
+        color: #2c9fec; }
   .main-footer__branding {
     color: #2c9fec;
     display: flex;
@@ -413,5 +449,32 @@ body {
       .main-footer__links > li svg {
         width: 4rem;
         height: 4rem;
+        fill: rgba(100, 100, 100, 0.7);
+        transition: fill 0.2s ease; }
+        .main-footer__links > li svg:hover, .main-footer__links > li svg:active {
+          fill: #2c9fec; }
+
+.contacts-info {
+  padding: 1rem; }
+  @media only screen and (max-width: 600px) {
+    .contacts-info {
+      padding: 0; } }
+  .contacts-info__title {
+    padding: 1rem;
+    font-size: 2rem;
+    color: #2c9fec; }
+  .contacts-info__list {
+    list-style: none;
+    padding: 0 2.5rem; }
+    .contacts-info__list li {
+      font-size: 1.6rem; }
+      .contacts-info__list li::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        display: inline-block;
+        background-color: #2c9fec;
         border-radius: 50%;
-        fill: #2c9fec; }
+        margin-right: 1rem; }
+      .contacts-info__list li:not(:last-child) {
+        margin-bottom: 1rem; }
