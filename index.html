@@ -4,12 +4,29 @@
 
 <head>
     <meta charset="utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126883936-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-126883936-1');
+    </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function () { try { w.yaCounter50646418 = new Ya.Metrika2({ id: 50646418, clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true }); } catch (e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/50646418" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <meta name="yandex-verification" content="383ad2a045e19316" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Компания Мегаполис осуществляет бесплатную доставку воды и сопутствующих товаров по Санкт-Петербургу и области. Также осуществляем быстрый, качественный и недорогой ремонт и дезинфекцию кулеров.">
     <meta name="keywords" content="доставка воды спб, вода спб, доставка воды в день заказа, заказать воду спб, заказ воды спб, помпа для воды, кофе, кофемашины, вода 19 литров, вода в офис, купить кулер, вода для кулера">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
-
-
     <link href="https://fonts.googleapis.com/css?family=Arimo:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
@@ -51,10 +68,10 @@
                     <a href="#section-others">Остальное</a>
                 </li>
                 <li class="nav-list__item">
-                    <a href="#">Информация</a>
+                    <a href="#section-info">Информация</a>
                 </li>
                 <li class="nav-list__item">
-                    <a href="#">Контакты</a>
+                    <a href="#section-contacts">Контакты</a>
                 </li>
             </ul>
 
@@ -103,7 +120,7 @@
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                    <img src="img/banner/banner-1200w.jpg">
+                    <img src="img/banner/megapolis-lg.jpg">
                 </div>
                 <div class="swiper-slide">
                     <img src="img/promos/vartem-promo.jpg">
@@ -151,7 +168,7 @@
                     </label>
                     <div class="water-item__desc">
                         <ul class="water-item__desc-price">
-                            <li>От 2 до 6 бутылей - 160₽ / бут.</li>
+                            <li>От 2 до 6 бутылей - 170₽ / бут.</li>
                             <li>От 7 до 10 бутылей - 150₽ / бут.</li>
                             <li>От 11 до 15 бутылей - 140₽ / бут.</li>
                             <li>От 16 бутылей - договорная</li>
@@ -181,7 +198,7 @@
                             Вода «Мегаполис»
                         </h3>
                         <p>
-                            От 120₽
+                            От 130₽
                         </p>
                     </div>
                     <input type="checkbox" id="water-megapolis" class="visually-hidden water-item__more-checkbox">
@@ -193,9 +210,9 @@
                     </label>
                     <div class="water-item__desc">
                         <ul class="water-item__desc-price">
-                            <li>От 2 до 6 бутылей - 160₽ / бут.</li>
-                            <li>От 7 до 10 бутылей - 150₽ / бут.</li>
-                            <li>От 11 до 15 бутылей - 140₽ / бут.</li>
+                            <li>От 2 до 6 бутылей - 150₽ / бут.</li>
+                            <li>От 7 до 10 бутылей - 140₽ / бут.</li>
+                            <li>От 11 до 15 бутылей - 130₽ / бут.</li>
                             <li>От 16 бутылей - договорная</li>
                         </ul>
                         <p class="water-item__desc-info">
@@ -212,6 +229,48 @@
                                 российским санитарным и эпидемиологическим нормам и СанПиН.</span>
                             <span>Более того, предлагаемая нами продукция полностью соответствует ГОСТ Р 52109-2003 "Вода
                                 питьевая, расфасованная в емкости. Общие технические условия".</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="water-list__item">
+                    <figure class="water-item__image">
+                        <img class="water-item__image--img" src="img/bottles/vartem-6L.jpg">
+                    </figure>
+
+                    <a href="img/info/certificate-vartem.jpg" class="water-item__info-link" target="_blank">
+                        <img src="img/info/certificate-vartem.min.jpg">
+                    </a>
+
+                    <div class="water-item__info">
+                        <h3>
+                            Вода «Вартемяжская» 6 л.
+                        </h3>
+                        <p>
+                            От 58₽
+                        </p>
+                    </div>
+                    <input type="checkbox" id="water-vart-6l" class="visually-hidden water-item__more-checkbox">
+                    <label for="water-vart-6l" class="water-item__more-label">
+                        <p>Подробнее</p>
+                        <svg>
+                            <use href="img/icons/arrow-right.svg#Capa_1"></use>
+                        </svg>
+                    </label>
+                    <div class="water-item__desc">
+                        <ul class="water-item__desc-price">
+                            <li>От 6 до 10 бутылей - 70₽ / бут.</li>
+                            <li>От 11 до 16 бутылей - 63₽ / бут.</li>
+                            <li>От 17 до 20 бутылей - 58₽ / бут.</li>
+                            <li>От 21 бутылей - договорная</li>
+                        </ul>
+                        <p class="water-item__desc-info">
+                            <span>Добывается из артезианских скважин №1414 и №1415 глубиной от 140 до 180 метров, расположенных
+                                в экологически чистом месте-деревне Вартемяги Всеволожского района Ленинградской области.</span>
+                            <span>Вода проходит многоступенчатую очистку, сохраняя природную структуру и минерализацию, а
+                                также проходит строгий контроль в соответствии с российскими и международными стандартами.</span>
+                            <span>Вода прозрачная, полностью лишена запаха и при кипячении не образует известкового налета
+                                благодаря чему является отличной основой для приготовления горячих напитков и пищи, но при
+                                этом вода также идеально подходит для ежедневного потребления без предварительного кипячения.</span>
                         </p>
                     </div>
                 </li>
@@ -235,6 +294,10 @@
                         <p class="goods-item__info-price">
                             800 ₽
                         </p>
+                        <p class="goods-item__info-desc">
+                            Мягкий, бархатный аромат восхищает своей сбалансированностью оттенков.
+                            <b>Состав:</b> 50% Арабика, 50% Робуста.
+                        </p>
                     </div>
                 </li>
                 <li class="goods-list__item">
@@ -247,6 +310,10 @@
                         </h3>
                         <p class="goods-item__info-price">
                             1300 ₽
+                        </p>
+                        <p class="goods-item__info-desc">
+                            Напиток имеет великолепное сочетание положительных свойств: завершенный бархатистый мягкий вкус, тонкий винный аромат, уникальное фруктовое послевкусие.
+                            <b>Состав:</b> 80% Арабика, 20% Робуста.
                         </p>
                     </div>
                 </li>
@@ -261,6 +328,10 @@
                         <p class="goods-item__info-price">
                             1400 ₽
                         </p>
+                        <p class="goods-item__info-desc">
+                            Этот кофе обладает богатым букетом, приятной крепостью и горчинкой настоящего итальянского эспрессо и нежным послевкусием.
+                            <b>Состав:</b> 40% Арабика, 60% Робуста, кофе натуральный жареный.
+                        </p>
                     </div>
                 </li>
                 <li class="goods-list__item">
@@ -273,6 +344,13 @@
                         </h3>
                         <p class="goods-item__info-price">
                             1300 ₽
+                        </p>
+                        <p class="goods-item__info-desc">
+                            Напиток имеет утонченную разнообразную вкусовую гамму.
+
+                            Яркая горчинка орехового оттенка возбуждает своей насыщенностью.
+                            Фруктовые нотки с благородной кислинкой в послевкусии придают экзотическое очарование и индивидуальность ароматическому букету.
+                            <b>Состав:</b> 90% Арабика, 10% Робуста.
                         </p>
                     </div>
                 </li>
@@ -303,6 +381,22 @@
                 </li>
                 <li class="goods-list__item">
                     <figure class="goods-item__figure">
+                        <img src="img/kuler.png">
+                    </figure>
+                    <div class="goods-item__info">
+                        <h3 class="goods-item__info-title">
+                            Кулеры и диспенсеры
+                        </h3>
+                        <p class="goods-item__info-price">
+                            от 2500 ₽
+                        </p>
+                        <p class="goods-item__info-desc">
+                            Наличие и стоимость уточняйте по телефонам.
+                        </p>
+                    </div>
+                </li>
+                <li class="goods-list__item">
+                    <figure class="goods-item__figure">
                         <img src="img/cup-200ml.jpg">
                     </figure>
                     <div class="goods-item__info">
@@ -317,10 +411,63 @@
                         </p>
                     </div>
                 </li>
+                <li class="goods-list__item">
+                    <figure class="goods-item__figure">
+                        <img src="img/coffee-cup.jpg">
+                    </figure>
+                    <div class="goods-item__info">
+                        <h3 class="goods-item__info-title">
+                            Чашка для кофе
+                        </h3>
+                        <p class="goods-item__info-price">
+                            110 ₽ / 50 шт.
+                        </p>
+                        <p class="goods-item__info-desc">
+                            Чашка одноразовая кофейная бело-коричневая емкостью 180 мл. Температура использования -20 + 110°С.
+                        </p>
+                    </div>
+                </li>
+                <li class="goods-list__item">
+                    <figure class="goods-item__figure">
+                        <img src="img/coffee-stick.jpg">
+                    </figure>
+                    <div class="goods-item__info">
+                        <h3 class="goods-item__info-title">
+                            Мешалка для кофе
+                        </h3>
+                        <p class="goods-item__info-price">
+                            100 ₽ / 500 шт.
+                        </p>
+                        <p class="goods-item__info-desc">
+                            Пластиковая палочка для размешивания кофе.
+                        </p>
+                    </div>
+                </li>
             </ul>
         </section>
 
-        <section class="section-contacts">
+        <section class="section-info" id="section-info">
+            <h2 class="section-title">
+                Информация
+            </h2>
+            <div class="divider"></div>
+            <div class="section-info__content">
+                <p class="section-info__content-title">
+                    О компании
+                </p>
+                <p class="section-info__content-text">
+                    Мы придерживаемся единого принципа - отвечать требованиям своих клиентов, постоянно развиваться, следуя тенденциям динамичного рынка бутилированной воды. Наша вода добывается из глубокой артезианской скважины. Затем она проходит специальную обработку - многоуровневую систему очистки на уникальной установке сертифицированной по высшему классу. На этом этапе из исходной воды удаляются все вредные примеси, бактерии, тяжелые металлы, хлорорганические соединения, в т.ч. диоксины. Состав воды специально оптимизирован для жителей Петербурга, что подтверждают тесты и многочисленные испытания ведущих лабораторий мира. На последнем этапе вода проходит обработку ультрафиолетом и ионами серебра. Вода становится полностью безопасной, увеличивает срок годности приготовленных блюд, и не образует накипи. 
+                </p>
+                <p class="section-info__content-title">
+                    Цель компании "МЕГАПОЛИС":
+                </p>
+                <p class="section-info__content-text">
+                    Организация максимально комфортного и оперативного сервиса в сфере доставки природной питьевой воды, при этом имея сравнительно низкие цены на рынке, благодаря качественной и профессиональной работе сотрудников компании.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-contacts" id="section-contacts">
             <h2 class="section-title">
                 Контакты
             </h2>

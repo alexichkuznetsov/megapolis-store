@@ -7,7 +7,7 @@
     "sass:watch": "node-sass scss/main.scss css/style.css --watch",
     "sass:compile": "node-sass scss/main.scss css/style.compiled.css",
     "prefix:css": "postcss --use autoprefixer css/style.compiled.css -o css/style.prefixed.css",
-    "compress:css": "node-sass css/style.prefixed.css css/style.css --output-style compressed"
+    "compress:css": "node-sass css/style.compiled.css css/style.css --output-style compressed"
   },
   "author": "Aleksey K.",
   "license": "ISC",
